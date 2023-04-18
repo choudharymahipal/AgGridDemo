@@ -1,4 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mainPadding {
+    padding: 20px;
+}
+
+.ag-root {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    //AgGrid vertical scroll
+    max-height: 400px;
+    overflow: scroll;
+}
+
+.ag-center-cols-container {
+    width: 100% !important;
+}
+
+.ag-header-row {
+    height: 48px !important;
+}
+
+// .ag-root-wrapper-body .ag-layout-normal {
+//     height: auto !important;
+// }
+
+.ag-cell {
+    padding: 6px !important;
+}
+
+.ag-center-cols-viewport {
+    width: 101% !important;
+    overflow-x: auto;
+}
+
+.ag-theme-alpine .ag-layout-auto-height .ag-center-cols-clipper,
+.ag-theme-alpine .ag-layout-auto-height .ag-center-cols-container {
+    min-height: 3px !important;
+}
+
+.ag-theme-alpine .ag-row {
+    font-size: 12px !important;
+}
+
+.ag-theme-alpine .ag-paging-panel › * {
+    margin: 0px !important;
+}
+
+.ag-paging-row-summary-panel {
+    margin: 0px !important;
+    padding-right: 40px !important;
+}

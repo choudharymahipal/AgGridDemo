@@ -1,0 +1,17 @@
+<h3>All Features Example</h3>
+
+<ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [columnDefs]="columnDef"
+    [suppressAggFuncInHeader]="true" (gridReady)="onGridReady($event)" [pagination]="true" [tooltipMouseTrack]="true"
+    [tooltipShowDelay]="tooltipShowDelay" [paginationPageSize]="paginationPageSize"
+    (sortChanged)="onSortChanged($event)" (gridSizeChanged)="onGridSizeChanged($event)">
+</ag-grid-angular>
+
+<div style="position: relative;left:35;padding-left:25px;bottom:35px;width:200px;">
+    Show:
+    <select (change)="onPageSizeChanaged()" id="page-size">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+    </select>
+</div>

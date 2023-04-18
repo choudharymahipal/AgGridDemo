@@ -4,7 +4,7 @@
   </button>
   <span>Ag Grid Demo</span>
   <span class="example-spacer"></span>
-  <span>Welcome Mahipal</span>
+  <!-- <span>Welcome Mahipal</span> -->
   <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
@@ -32,14 +32,51 @@
   <mat-drawer [(opened)]="IsDrawer" #drawer class="example-sidenav" mode="side">
     <button mat-menu-item routerLink="/">
       <mat-icon color="primary">home</mat-icon>
-      <span>Menu 1</span>
+      <span>Home</span>
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item routerLink="/chart/line">
-      <mat-icon color="primary">account_circle</mat-icon>
-      <span>Menu 2</span>
+    <button mat-menu-item routerLink="/allfeatures">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>All Features</span>
     </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/addserialno">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Add Serial No</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/sortingandpagination">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Sorting & Pagination</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/cellrenderer">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Cell Renderer</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/mutipleheader">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Multiple Header</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/customfilter">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Custom Filter</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/copytoclipboard">
+      <mat-icon color="primary">keyboard_double_arrow_right</mat-icon>
+      <span>Copy to clipboard</span>
+    </button>
+    <mat-divider></mat-divider>
   </mat-drawer>
-  <router-outlet></router-outlet>
+  <div class="mainPadding">
+    <mat-card>
+      <router-outlet></router-outlet>
+    </mat-card>
+    
+  </div>
+  
 </mat-drawer-container>
 

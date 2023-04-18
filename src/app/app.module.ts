@@ -50,16 +50,37 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { CopyToClipboardComponent } from './Components/copy-to-clipboard/copy-to-clipboard.component';
+import { CustomFilterComponent } from './Components/custom-filter/custom-filter.component';
+import { AllFeaturesComponent } from './Components/all-features/all-features.component';
+import { MultiHeaderComponent } from './Components/multi-header/multi-header.component';
+import { SortingAndPaginationComponent } from './Components/sorting-and-pagination/sorting-and-pagination.component';
+import { AddSerialNoComponent } from './Components/add-serial-no/add-serial-no.component';
+import { HomeComponent } from './Components/home/home.component';
+import { CellRendererComponent } from './Components/cell-renderer/cell-renderer.component';
+import { FakeDataService } from './Services/fake-data.service';
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CopyToClipboardComponent,
+    CustomFilterComponent,
+    AllFeaturesComponent,
+    MultiHeaderComponent,
+    SortingAndPaginationComponent,
+    AddSerialNoComponent,
+    HomeComponent,
+    CellRendererComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AgGridModule,
+    HttpClientModule,
     //Angular Material modules
     A11yModule,
     CdkAccordionModule,
@@ -107,7 +128,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     PortalModule,
     ScrollingModule
   ],
-  providers: [],
+  providers: [FakeDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
