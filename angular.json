@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "AgGridDemo"
+  "defaultProject": "AgGridDemo",
+  "cli": {
+    "analytics": false
+  }
 }
